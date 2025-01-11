@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    font-size: 32pt;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0 0 2px #fff;
+    overflow: hidden;
+}
+
+body {
+    background: #000;
+}
+
+
+.page-heading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 9vh;
+    line-height: 23.5vh;
+    color: #fff7;
+    text-shadow: 0 0 1px #fff7;
+    border-bottom: 1px solid #fff2;
+}
+
+.page-heading span {
+    font-size: 9vh;
+    line-height: 23.5vh;
+    color: #fff7;
+    text-shadow: 0 0 1px #fff7;
+}
+
+.page-heading span:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-container {
+    margin-top: 23.5vh;
+    width: 100vw;
+    height: 62vh    ;
+    justify-items: center;
+    display: flex;
+}
+
+.content-column{
+    height: 62vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+.nav-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: #000;
+    border-top: 1px solid #fff2;
+}
+
+.nav-container .nav-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 5.5vh;
+    line-height: 14.5vh;
+    color: #fff1;
+    text-shadow: 0 0 1px #fff1;
+    border-left: 1px solid #fff0;
+    border-right: 1px solid #fff0;
+    width: 20vw;
+    text-align: center;
+}
+
+.nav-container .nav-link.active {
+    color: #fff3;
+}
+
+.nav-container .nav-link:hover {
+    color: #fff;
+}
+
+.content-container div {
+    margin: auto;
+    text-align: center;
+}
+
+.content-container ul li {
+    margin-top: 5vh;
+}
+
+b {
+    font-weight: 500;
+}
+
+#left {
+    float: left;
+    width: 38%;
+
+
+}
+
+#right {
+    float: right;
+    width: 62%;
+
+    padding: 10vh;
+}
+
+.visualisation {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.content-column h3 {
+    font-size: 26pt;
+    margin-bottom: .5vh;
+    font-weight: 100;
+}
+
+.text {
+    font-size: 28pt;
+}
+
+.text.small {
+    font-size: 20pt;
+}
+
+.text.extra-small {
+    font-size: 12pt;
+}
+
+.text.emph {
+    font-weight: 400;
+}
+
+.memetext {
+    font-family: Impact, sans-serif;
+    font-size: 32pt;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px;
+    text-shadow: 0 0 10px #000;
+}
