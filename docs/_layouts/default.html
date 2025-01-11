@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    {% if page.style %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.style }}">
+    {% endif %}
+</head>
+<body>
+<div class="page-heading">{{ page.heading }}</div>
+<div class="content-container">{{ content }}</div>
+<div class="nav-container" id="nav-bar">{% include nav.html %}</div>
+<script>
+    window.onkeydown = function(e) {
+        if (e.key === 'ArrowLeft') {
+            window.location = '{{ page.prev_url | relative_url }}';
+        } else if (e.key === 'ArrowRight') {
+            window.location = '{{ page.next_url | relative_url }}';
+        }
+    };
+    window.onload = () => {
+        const _20vw = window.innerWidth *.2;
+        let _const = 0;
+        if (parseInt('{{ page.index }}') > 0) {
+            _const = window.innerWidth * -.1;
+        }
+
+        document.getElementById('nav-bar').scrollTo(parseInt('{{ page.index }}') * _20vw + _const, 0);
+    }
+</script>
+
+</body>
+</html>
