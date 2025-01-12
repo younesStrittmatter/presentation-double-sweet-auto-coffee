@@ -1,8 +1,8 @@
 ---
-title: Outline
+title: Motivation
 layout: default
-permalink: '/outline/'
-heading: 'Outline'
+permalink: '/motivation--/'
+heading: 'Motivation'
 prev_url: '/motivation/'
 next_url: '/roadmap/'
 index: 3

@@ -2,12 +2,12 @@
   url: /
 - title: Title
   url: /title/
-- title: Summary
-  url: /summary/
+- title: Roadmap
+  url: /roadmap/
 - title: Motivation
   url: /motivation/
-- title: Outline
-  url: /outline/
+- title: Demo Outline
+  url: /demo-outline/
 - title: Roadmap
   url: /roadmap/
 - title: Loop
