@@ -120,7 +120,7 @@ document.getElementById('condition').onclick = () => {
             }
         }
         element.style.backgroundSize = `${stripeWidth}% 100%`;
-        window.setTimeout(animateStripes, 2000);
+        window.setTimeout(animateStripes, 1500);
     };
     animateStripes();
 }
