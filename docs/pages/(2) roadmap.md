@@ -8,7 +8,10 @@ next_url: '/motivation/'
 index: 2
 ---
 <div id="left" class="content-column">
-<img src="{{ '/assets/images/coffee_road.png' | relative_url }}" class="visualisation">
+<video autoplay loop muted playsinline id="title-video" class="visualisation" style="color: white">
+  <source src="{{ '/assets/videos/coffee.mp4' | relative_url }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 </div>
 
 <div id="right" class="content-column">

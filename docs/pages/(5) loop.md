@@ -3,9 +3,9 @@ title: Research Loop
 layout: default
 permalink: '/loop/'
 heading: 'AutoRA: Research <span id="loop">"Loop"</span>'
-prev_url: '/motivation/'
+prev_url: '/demo-outline/'
 next_url: '/loop/'
-index: 3
+index: 5
 ---
 
 <style>

@@ -4,18 +4,26 @@ layout: default
 permalink: '/demo-outline/'
 heading: 'Demo - Outline'
 prev_url: '/motivation/'
-next_url: '/loop/'
+next_url: '/double-sweet-coffee/'
 index: 4
 ---
-
+<style>
+.tools {
+    position: absolute;
+    bottom: 4vh;
+    font-size: 20pt;
+    color: #aaa;
+}
+</style>
 <div id="left" class="content-column" style="overflow: hidden; position: relative">
 </div>
 
+
 <div id="right" class="content-column" >
-<div class="clickable text small" id="paradigm">Paradigm - Coffe World</div>
+<div class="clickable text small" id="paradigm">Paradigm - Coffee World</div>
 <div class="clickable text small" id="condition">Experimental Design Space - Block Length</div>
-<div class="clickable text small">Run Experiment - LLM & Human Participants</div>
-<div class="clickable text small">Model Comparison - Interpolation vs. Ego Model</div>
+<div class="clickable text small" id="runner">Run Experiment - LLM & Human Participants</div>
+<div class="clickable text small" id="comparison">Model Comparison - Interpolation vs. Ego Model</div>
 </div>
 
 <script>
@@ -37,10 +45,11 @@ const clear = () => {
 document.getElementById('paradigm').onclick = () => {
     clear();
     const preview = document.getElementById('left');
+    preview.innerHTML = '<div class="tools">SweetBean</div>';
     const basePath = "{{ '/assets/images/' | relative_url }}";
     const contexts = [[0, 2, 4, 6, 8], [0, 3, 5, 7, 9], [1, 2, 5, 6, 9], [1, 3, 4, 7, 8]];
     let context_idx = 0;
-    let src_idx = 0;
+    let src_idx = -1;
     
     
     window.setInterval(() => {
@@ -70,14 +79,17 @@ document.getElementById('paradigm').onclick = () => {
             }
             const imageIndex = contexts[context_idx][src_idx];
             const imageUrl = `${basePath}${imageIndex}.png`;
-            const bg = ['#f00', '#0f0', '#00f', '#ff0'][Math.floor(context_idx/2)]; 
+            let bg = '#fff';
+            if (src_idx === 0) {
+                bg = ['#f00', '#0f0', '#00f', '#ff0'][Math.floor(context_idx/2)];
+            }
             element.style.background = `${bg} url('${imageUrl}')`;
             element.style.backgroundSize = 'cover';
             element.innerText = '';
             
             element.style.border = '3px solid #fff';
             window.setTimeout(() => {
-                element.style.background = `#fff2 url('${imageUrl}')`;
+                element.style.background = `${bg}4 url('${imageUrl}')`;
                 element.style.border = '1px solid #fff5';
                 element.style.backgroundSize = 'cover';
             }, 1200);
@@ -95,6 +107,7 @@ document.getElementById('paradigm').onclick = () => {
 document.getElementById('condition').onclick = () => {
     clear();
     const preview = document.getElementById('left');
+    preview.innerHTML = '<div class="tools">SweetPea</div>';
     const element = document.createElement('div');
     element.style.width = '80%';
     element.style.height = '10%';
@@ -123,6 +136,18 @@ document.getElementById('condition').onclick = () => {
         window.setTimeout(animateStripes, 1500);
     };
     animateStripes();
-}
+};
 
+document.getElementById('runner').onclick = () => {
+    clear();
+    const preview = document.getElementById('left');
+    preview.innerHTML = '<div><h3>LLM</h3><div class="text small">SweetBean/AutoRA Experiments interface with LLMs as synthetic participants.</div></div>';
+    preview.innerHTML += '<div><h3>Human Participants</h3><div class="text small">SweetBean/AutoRA Experiments also interface with prolific/firebase for running experiments on the web and recruiting participants.</div></div>';};
+
+document.getElementById('comparison').onclick = () => {
+    clear();
+    const preview = document.getElementById('left');
+    preview.innerHTML = '<div><h3>Interpolation</h3><div class="text small">AutoRA: "Interpolates" between conditions.</div></div>';
+    preview.innerHTML += '<div><h3>Ego Model</h3><div class="text small">Psyneulink model - Episodic Generalization and Optimization.</div></div>';
+};
 </script>
