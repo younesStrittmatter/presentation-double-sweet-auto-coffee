@@ -4,7 +4,7 @@ layout: default
 permalink: '/double-sweet-coffee/'
 heading: ''
 prev_url: '/demo-outline/'
-next_url: '/loop/'
+next_url: '/sweet-pea-1/'
 index: 5
 ---
 <style>
